@@ -11,7 +11,7 @@ C언어는 데이터의 종류를 구분해서 사용할 수 있도록 데이터
 
 C언어의 데이터형은 크게 **기본 데이터형, 파생 데이터형, 사용자 정의형**으로 구분할 수 있다. 
 
-**기본 데이터형****은 C언어 자체에서 기본 제공하는 문자형인 char 정수형인 short, int, long, long long 실수형인 float, double, long double 등 있다.
+**기본 데이터형**은 C언어 자체에서 기본 제공하는 문자형인 char 정수형인 short, int, long, long long 실수형인 float, double, long double 등 있다.
 
 **정수형의 부호 있는 정수형(signed)과 부호 없는 정수형(unsigned)**
 | 데이터 형           | 크기        | 유효 범위                            |
