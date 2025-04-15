@@ -1,87 +1,56 @@
 # 프로그램 기본
+`C언어를 선택한 이유는 간단하다. 이 언어는 컴퓨터의 심장을 들여다보는 열쇠와 같다. 메모리 관리, 포인터, 배열 같은 강력하고 기본적인 개념을 직접 다루면서 시스템의 작동 원리를 깊이 탐구할 수 있다. 이를 통해 C++의 세련미, Java의 실용성, Python의 간결함까지도 더 쉽게 이해할 수 있으며, C언어를 배우는 건 단순한 선택이 아니라, 프로그래밍 세계로 들어가는 가장 매력적인 첫걸음이라고 할 수 있다.`
 
+---
 **프로그램 코드 주석**
 
 각 언어마다 주석 하는 방법은 다르며, 소스 코드를 더 쉽게 이해할 수 있게 만드는 것이 주 목적이다.
-```python
-# Python은 # 또는 """내용""" 통해 사용할 수 있습니다.
-```
 ```c
-// C언어와 C++, Java는 // 주석을 통해 사용할 수 있습니다.
+// C언어는 // 또는 /*내용*/ 주석을 통해 사용할 수 있습니다.
 ```
 
-
+---
 **프로그램 출력 함수 print**
 
 print 출력 함수는 각 언어마다 print형식이 다르며, 프로그래밍 언어에서 화면에 텍스트나 데이터를 출력하는 데 사용되는 기본적인 함수이다.
-```python
-# Python
-print("Hello World")
-```
 ```c
 // C
 #include <stdio.h> //입출력 라이브러리
 
 int main(){ // main 함수 선언
-    printf("Hello World!");
+    printf("Hello World!\n");
     return 0;
 }
 ```
-```Java
-// Java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
+
+---
 **프로그램 변수 선언**
 
 변수는 값을 저장하기 위한 공간이고 컴퓨터 시스템에서는 값을 저장하기 위해서 메모리를 사용한다. 메모리는 한 바이트 단위로 값을 저장할 수 있으며, 메모리의 각 바이트를 구분하기 위한 주소를 사용한다. 즉 변수는 메모리 공간에 대하여 이름을 붙여 두고 이름으로 접근 하는 방법을 제공한다.
-```python
-# Python
-    age = 21 # 함수 선언 안해도 자동으로 자료형 적용됨
-    cm = 186.5
-```
 ```c
-// C, C++, Java
+// C
     int age = 21;
     float cm = 186.5;
 ```
 변수를 사용할려면 먼저 변수 이름과 데이터형을 정해야 한다. 변수의 선언은 컴파일러에게 변수의 이름과 데이터형을 미리 알려주고, 변수를 사용할 수 있도록 준비시킨다. 변수는 영문자와 숫자, 밑줄기호( _ )로 만들 수 있다.
 
+---
 **프로그램 변수 출력하기**
 
 print함수는 문자열을 출력하는 기능 외에도, 값을 서식에 맞춰 출력하는 기능을 제공한다. print 함수는 첫 번쨰 인자로 형식 문자열을 사용한다. 형식 문자열은 " " 안에 약속된 문자로 서식을 지정할 수 있다.
-```python
-# Python
-    age = 21
-    cm = 186.5
-    print("당신의 나이는", age, "이며, 당신의 키는", cm, "입니다.")
-    # 또는 print(f"당신의 나이는 {age}이며, 당신의 키는 {cm}입니다.")
-    # 또는 print("당신의 나이는 %d이며, 당신의 키는 %f입니다." % (age, cm))
-```
 ```c
-// C, C++
+// C
 #include <stdio.h>
 
 int main(){
     int age = 21;
     float cm = 186.5;
-    printf("당신의 나이는 %d이며, 당신의 키는 %f입니다.", age, cm);
+    printf("당신의 나이는 %d이며, 당신의 키는 %.2f입니다.", age, cm);
     return 0;
 }
 ```
-```Java
-// Java
-public class Main {
-    public static void main(String[] args) {
-        int age = 21;
-        float cm = 186.5;
-        System.out.println("당신의 나이는 " + age + "이며, 당신의 키는 " + cm + "입니다."); // 공백 추가
-    }
-}
-```
+
+---
 **프로그램 출력 서식 지정자**
 
 print 함수 형식의 문자열을 이용하면 값을 여러 가지 형식으로 출력할 수 있다. 예를 들면 정수값 10을 출력하려면 %d를 지정하고, 16진수로 출력하려면 %x를 지정하면 된다.
@@ -100,16 +69,13 @@ print 함수 형식의 문자열을 이용하면 값을 여러 가지 형식으�
     - %.2f(소수점 이하 2자리로 실수를 출력): `34.5` -> `34.50` 
     - %6.2f(폭과 정밀도, 소수점 이하 2자리로 실수를 출력): `34.5` -> `ㅤ34.50` 
 
+---
 **프로그램 입력함수**
 
 입력 함수는 콘솔에서 키보드로 입력한 값을 변수로 읽어온다. 
-```python
-# Python
-age = input("나이를 입력하세요: ")
-```
 ```c
-// C, C++
-#define _CRT_SECURE_NO_WARNINGS // scanf 사용시 필요, 꼭 stdio.h 앞에 써줘야 한다.
+// C
+#define _CRT_SECURE_NO_WARNINGS // Visual Studio 전용 scanf함수 사용시 필요, 꼭 stdio.h 앞에 써줘야 한다.
 #include <stdio.h>
 
 int main(){
@@ -118,18 +84,9 @@ int main(){
     scanf("%d", &age); // 변수 이름 앞에 &를 지정하면 '~에'라는 의미임
 }
 ```
-```Java
-// Java
-import java.util.Scanner; // Scanner 클래스를 사용하여 콘솔에서 사용자 입력을 받을 수 있는 객체를 생성
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("당신의 나이를 입력하세요.: ");
-        int age = scanner.nextInt();
-    }
-}
-```
-**프로그램 입력 서식 지정자 - Java와 Python은 입력 서식지정자 사용하지않음.**
+
+---
+**프로그램 입력 서식 지정자**
 | 서식 지정자 | 의미 ||
 |---|:---:|---:|
 | `%d` | 정수를 10진수로 입력 ||
@@ -137,3 +94,5 @@ public class Main {
 | `%i` | 정수를 10진수 8진수, 16진수로 입력 (012는 8진수, 0x12는 16진수) ||
 | `%f` | float형 실수 입력 ||
 | `%c` | 한 문자 입력 ||
+
+---
