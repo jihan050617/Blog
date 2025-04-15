@@ -99,12 +99,13 @@ int main() {
 
 int main() {
     char a = 128; //char의 유효범위는 -128 ~ 127이며 128은 초과범위이다.
-    unsigned char red = 300; // unsigned char 유효범위는 0~255이다 300은 초과범위이다.
+    unsigned char red = 256; // unsigned char 유효범위는 0~255이다 300은 초과범위이다.
     printf("a = %d\n", a);
     printf("red = %d\n", red);
     return 0;
 }
 // 출력 :
 // a = -128
-// red = 44
+// red = 0
 ```
+![img](/Chapter/02/image3.png "데이터의 2진 표현 예시")
