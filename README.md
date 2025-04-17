@@ -1,4 +1,4 @@
-# University-Related Materials
+# Blog
 `<주의> 본 설명중에 오류가 포함될 수 있으며, 오류가 포함이 된 경우 jihan050617@gmail.com으로 연락주세요.`
 
 ---
